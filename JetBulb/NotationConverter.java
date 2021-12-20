@@ -1,8 +1,5 @@
 package JetBulb;
 
-/**
- * @author Max Steblevskiy(JavaAbuser) on 20.12.21
- */
 public class NotationConverter {
     public int toArabic(String romanNotation) throws InvalidValueException {
         if (romanNotation == null || romanNotation.isBlank()) {
