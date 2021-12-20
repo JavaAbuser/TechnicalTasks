@@ -3,7 +3,9 @@ package JetBulb;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+/**
+* @author Max Steblevskiy(JavaAbuser) on 20.12.21
+*/
 public class NotationConverter {
     final char[] literals = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
     final int[] values = {1, 5, 10, 50, 100, 500, 1000};
