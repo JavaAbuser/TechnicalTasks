@@ -15,16 +15,20 @@ public class Task3Sum {
         int result = 0;
         String str = expression.replaceAll("\\s*", "");
         int counter = 0;
-        for(int i = 0; i < str.toCharArray().length; i++){
-            if(str.charAt(i) == '+' || str.charAt(i) == '-'){
-                if(str.charAt(i) == '+'){
-                    result += Integer.parseInt(str.subSequence(counter, i).toString());
-                    counter = i + 1;
-                } else if(str.charAt(i) == '-'){
-                    result -= Integer.parseInt(str.subSequence(counter, i).toString());
-                    counter = i + 1;
+        try {
+            for (int i = 0; i < str.toCharArray().length; i++) {
+                if (str.charAt(i) == '+' || str.charAt(i) == '-') {
+                    if (str.charAt(i) == '+') {
+                        result += Integer.parseInt(str.subSequence(counter, i).toString());
+                        counter = i + 1;
+                    } else if (str.charAt(i) == '-') {
+                        result -= Integer.parseInt(str.subSequence(counter, i).toString());
+                        counter = i + 1;
+                    }
                 }
             }
+        } catch(Exception exception){
+            return null;
         }
         return result;
     }
