@@ -21,6 +21,25 @@ public class Task4Stones {
      */
 
     public int[] peopleAndStones(int peopleNumber, int stonesNumber){
-        throw new RuntimeException("Стереть и написать реализацию");
+        int[] array = new int[peopleNumber];
+        int stonesCount = 1;
+        int count = 0;
+        int humanId = 0;
+        while(count < stonesNumber){
+            if(humanId < peopleNumber){
+                if(stonesNumber < 3){
+                    array[humanId] += 1;
+                } else {
+                    array[humanId] += stonesCount;
+                }
+                count += stonesCount;
+                humanId++;
+                stonesCount++;
+            } else{
+                humanId = 0;
+            }
+        }
+
+        return array;
     }
 }
