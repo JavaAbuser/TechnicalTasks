@@ -1,0 +1,3 @@
+theme:brent
+cyclically:true
+period:10s
